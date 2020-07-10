@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#110211"
+    android:elevation="30dp"
+    android:orientation="vertical">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/Laptime"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="#f2f2f2"
+        android:textAlignment="center"/>
+
+</LinearLayout>

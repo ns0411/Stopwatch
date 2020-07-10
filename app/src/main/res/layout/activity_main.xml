@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000020"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ClockNeedle"
+        android:layout_width="266dp"
+        android:layout_height="260dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/clock_needle" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ClockCircle"
+        android:layout_width="385dp"
+        android:layout_height="326dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/clock_circle" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/startStopWatch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ClockCircle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/ic_action_play"
+        android:background="@drawable/round_button"
+        android:textColor="#f2f2f2" />
+
+    <Chronometer
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format="00:00:00"
+        android:textSize="30sp"
+        android:textColor="#f2f2f2"
+        android:layout_below="@+id/ClockCircle"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/timer"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/controlLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        android:layout_below="@id/ClockCircle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/resetStopWatch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/ic_action_reset"
+            android:tag="reset"
+            android:background="@drawable/round_button"
+            android:textColor="#f2f2f2" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/pauseStopWatch"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tag="pause"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="140dp"
+            android:src="@drawable/ic_action_pause"
+            android:background="@drawable/round_button"
+            android:textColor="#f2f2f2" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
